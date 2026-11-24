@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Questionário IVCF-20 para avaliação clínico-funcional de pessoas idosas - Clínica de APS Qualirede.">
+<title>IVCF-20 | Clínica de APS Qualirede</title>
+<style>
+:root{--navy:#173b5e;--blue:#176b87;--teal:#16877b;--ink:#233342;--muted:#617282;--line:#d8e1e8;--bg:#f3f6f8;--white:#fff;--soft:#eaf2f6;--green:#27764d;--amber:#9a6810;--red:#a43d3d}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 Arial,Helvetica,sans-serif}
+header{background:linear-gradient(115deg,#173b5e,#176b87);color:white;padding:28px 18px}
+.head{max-width:1000px;margin:auto}
+.brand{font-size:13px;letter-spacing:1.4px;font-weight:bold;opacity:.9}
+h1{font-size:clamp(25px,4vw,36px);margin:7px 0 4px}
+header p{margin:0;opacity:.93}
+main{max-width:1000px;margin:22px auto;padding:0 14px 40px}
+.notice{background:#fff8e8;border:1px solid #f0d99f;border-left:5px solid #d49a28;padding:13px 15px;border-radius:8px;margin-bottom:18px;color:#624b1d}
+.panel{background:white;border:1px solid var(--line);border-radius:12px;padding:20px;margin:0 0 16px;box-shadow:0 2px 8px #1b38500a}
+h2{font-size:19px;color:var(--navy);margin:0 0 14px}
+h3{font-size:16px;color:var(--blue);margin:0 0 9px}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.field label,.field>span{display:block;font-weight:600;margin-bottom:5px}
+input[type=text],input[type=date],input[type=number],select,textarea{width:100%;padding:10px 11px;border:1px solid #bdcbd5;border-radius:7px;font:inherit;background:white;color:var(--ink)}
+.question{padding:15px 0;border-top:1px solid var(--line)}
+.question:first-of-type{border-top:0}
+.qtitle{font-weight:600;margin-bottom:8px}
+.qhint{font-size:13px;color:var(--muted);margin:-3px 0 8px}
+.options{display:flex;flex-wrap:wrap;gap:9px 18px}
+.options label,.checkline{display:flex;gap:7px;align-items:flex-start;font-weight:normal;cursor:pointer}
+input[type=radio],input[type=checkbox]{accent-color:var(--blue);margin-top:4px;transform:scale(1.08)}
+.small{font-size:12px;color:var(--muted)}
+.actions{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0}
+button{border:0;border-radius:8px;padding:12px 17px;font-weight:700;font-size:14px;cursor:pointer}
+.primary{background:var(--teal);color:white}.secondary{background:#e6eef3;color:var(--navy)}.danger{background:#f8e9e9;color:#8c3030}
+button:focus,input:focus,select:focus,textarea:focus{outline:3px solid #8ac7d8;outline-offset:1px}
+.result{display:none}
+.result.show{display:block}
+.scoreline{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.score{font-size:46px;font-weight:800;color:var(--navy);line-height:1}
+.score small{font-size:14px;color:var(--muted);font-weight:600}
+.status{display:inline-block;padding:7px 12px;border-radius:30px;font-weight:700}
+.low{background:#e4f3e9;color:var(--green)}.mid{background:#fff2d7;color:var(--amber)}.high{background:#f9e5e5;color:var(--red)}
+.progress{height:12px;background:#e7edf1;border-radius:20px;overflow:hidden;margin:14px 0}
+.progress>div{height:100%;width:0;background:var(--teal);transition:width .2s}
+.breakdown{width:100%;border-collapse:collapse;margin-top:12px}
+.breakdown th,.breakdown td{text-align:left;padding:8px;border-bottom:1px solid var(--line)}
+.breakdown th{color:var(--muted);font-size:12px}
+footer{max-width:1000px;margin:0 auto;padding:0 16px 30px;color:var(--muted);font-size:12px}
+hr{border:0;border-top:1px solid var(--line);margin:15px 0}
+@media(max-width:650px){.grid{grid-template-columns:1fr}.panel{padding:15px}.score{font-size:40px}}
+@media print{
+ body{background:white;font-size:11pt;color:#111}
+ header{background:white!important;color:#111;padding:0 0 12px;border-bottom:2px solid #173b5e}
+ header p,.brand{color:#333;opacity:1}
+ main{max-width:none;margin:10px 0;padding:0}
+ .panel{box-shadow:none;border:1px solid #bbb;padding:12px;margin-bottom:10px;break-inside:avoid}
+ .actions,.no-print,.notice{display:none!important}
+ .result{display:block!important}
+ .question{padding:8px 0}
+ button{display:none}
+ footer{padding:10px 0}
+ h1{font-size:22pt}
+}
+</style>
+</head>
+<body>
+<header>
+ <div class="head">
+  <div class="brand">QUALIREDE • CLÍNICA DE ATENÇÃO PRIMÁRIA À SAÚDE</div>
+  <h1>IVCF-20</h1>
+  <p>Índice de Vulnerabilidade Clínico-Funcional — versão para profissional de saúde</p>
+ </div>
+</header>
+<main>
+ <div class="notice"><strong>Orientação de aplicação:</strong> instrumento destinado à triagem de pessoas com 60 anos ou mais. Sempre que possível, as respostas devem ser fornecidas pela própria pessoa idosa e confirmadas por familiar, cuidador ou acompanhante que conheça sua rotina. Não deixe questões sem resposta. O resultado apoia a avaliação e o planejamento do cuidado; não substitui avaliação clínica ou avaliação multidimensional.</div>
+
+ <form id="ivcfForm">
+  <section class="panel">
+   <h2>Identificação da pessoa avaliada</h2>
+   <div class="grid">
+    <div class="field"><label for="patient">Nome completo</label><input id="patient" type="text" autocomplete="name" placeholder="Nome da pessoa idosa"></div>
+    <div class="field"><label for="birth">Data de nascimento</label><input id="birth" type="date"></div>
+    <div class="field"><label for="assessmentDate">Data da avaliação</label><input id="assessmentDate" type="date"></div>
+    <div class="field"><label for="professional">Profissional responsável</label><input id="professional" type="text" placeholder="Nome e categoria profissional"></div>
+    <div class="field"><label for="unit">Unidade / serviço</label><input id="unit" type="text" value="Clínica de APS Qualirede"></div>
+    <div class="field"><label for="respondent">Quem respondeu?</label>
+     <select id="respondent"><option value="">Selecione</option><option>Pessoa idosa</option><option>Pessoa idosa com apoio de familiar/cuidador</option><option>Familiar/cuidador/acompanhante</option></select>
+    </div>
+    <div class="field" style="grid-column:1/-1"><label for="companion">Nome do familiar/cuidador (se aplicável)</label><input id="companion" type="text" placeholder="Nome e vínculo"></div>
+   </div>
+  </section>
+
+  <section class="panel">
+   <h2>Questionário IVCF-20</h2>
+   <p class="small">Selecione uma resposta em cada questão. A pontuação e a classificação são atualizadas automaticamente.</p>
+
+   <h3>1. Idade</h3>
+   <div class="question" data-q="q1">
+    <div class="qtitle">1. Qual é a sua idade?</div>
+    <div class="options">
+     <label><input type="radio" name="q1" value="0"> 60 a 74 anos (0 ponto)</label>
+     <label><input type="radio" name="q1" value="1"> 75 a 84 anos (1 ponto)</label>
+     <label><input type="radio" name="q1" value="3"> 85 anos ou mais (3 pontos)</label>
+    </div>
+   </div>
+
+   <h3>2. Autopercepção da saúde</h3>
+   <div class="question">
+    <div class="qtitle">2. Em geral, comparando com outras pessoas de sua idade, você diria que sua saúde é:</div>
+    <div class="options">
+     <label><input type="radio" name="q2" value="0"> Excelente, muito boa ou boa (0 ponto)</label>
+     <label><input type="radio" name="q2" value="1"> Regular ou ruim (1 ponto)</label>
+    </div>
+   </div>
+
+   <h3>3. Atividades de vida diária</h3>
+   <div class="question">
+    <div class="qtitle">3. Por causa de sua saúde ou condição física, você deixou de fazer compras?</div>
+    <div class="options"><label><input type="radio" name="q3" value="4"> Sim</label><label><input type="radio" name="q3" value="0"> Não ou não faz compras por outros motivos que não a saúde</label></div>
+   </div>
+   <div class="question">
+    <div class="qtitle">4. Por causa de sua saúde ou condição física, você deixou de controlar seu dinheiro, gastos ou pagar as contas de sua casa?</div>
+    <div class="options"><label><input type="radio" name="q4" value="4"> Sim</label><label><input type="radio" name="q4" value="0"> Não ou não controla o dinheiro por outros motivos que não a saúde</label></div>
+   </div>
+   <div class="question">
+    <div class="qtitle">5. Por causa de sua saúde ou condição física, você deixou de realizar pequenos trabalhos domésticos, como lavar louça, arrumar a casa ou fazer limpeza leve?</div>
+    <div class="options"><label><input type="radio" name="q5" value="4"> Sim</label><label><input type="radio" name="q5" value="0"> Não ou não faz mais pequenos trabalhos domésticos por outros motivos que não a saúde</label></div>
+    <p class="qhint">Atenção: as questões 3, 4 e 5 pontuam 4 pontos cada quando positivas, mas o subtotal conjunto é limitado a 4 pontos.</p>
+   </div>
+   <div class="question">
+    <div class="qtitle">6. Por causa de sua saúde ou condição física, você deixou de tomar banho sozinho?</div>
+    <div class="options"><label><input type="radio" name="q6" value="6"> Sim (6 pontos)</label><label><input type="radio" name="q6" value="0"> Não (0 ponto)</label></div>
+   </div>
+
+   <h3>4. Cognição</h3>
+   <div class="question"><div class="qtitle">7. Algum familiar ou amigo falou que você está ficando esquecido?</div><div class="options"><label><input type="radio" name="q7" value="1"> Sim (1 ponto)</label><label><input type="radio" name="q7" value="0"> Não (0 ponto)</label></div></div>
+   <div class="question"><div class="qtitle">8. Este esquecimento está piorando nos últimos meses?</div><div class="options"><label><input type="radio" name="q8" value="1"> Sim (1 ponto)</label><label><input type="radio" name="q8" value="0"> Não (0 ponto)</label></div></div>
+   <div class="question"><div class="qtitle">9. Este esquecimento está impedindo a realização de alguma atividade do cotidiano?</div><div class="options"><label><input type="radio" name="q9" value="2"> Sim (2 pontos)</label><label><input type="radio" name="q9" value="0"> Não (0 ponto)</label></div></div>
+
+   <h3>5. Humor</h3>
+   <div class="question"><div class="qtitle">10. No último mês, você ficou com desânimo, tristeza ou desesperança?</div><div class="options"><label><input type="radio" name="q10" value="2"> Sim (2 pontos)</label><label><input type="radio" name="q10" value="0"> Não (0 ponto)</label></div></div>
+   <div class="question"><div class="qtitle">11. No último mês, você perdeu o interesse ou prazer em atividades anteriormente prazerosas?</div><div class="options"><label><input type="radio" name="q11" value="2"> Sim (2 pontos)</label><label><input type="radio" name="q11" value="0"> Não (0 ponto)</label></div></div>
+
+   <h3>6. Mobilidade</h3>
+   <div class="question"><div class="qtitle">12. Você é incapaz de elevar os braços acima do nível do ombro?</div><div class="options"><label><input type="radio" name="q12" value="1"> Sim (1 ponto)</label><label><input type="radio" name="q12" value="0"> Não (0 ponto)</label></div></div>
+   <div class="question"><div class="qtitle">13. Você é incapaz de manusear ou segurar pequenos objetos?</div><div class="options"><label><input type="radio" name="q13" value="1"> Sim (1 ponto)</label><label><input type="radio" name="q13" value="0"> Não (0 ponto)</label></div></div>
+   <div class="question">
+    <div class="qtitle">14. Você tem alguma das quatro condições abaixo relacionadas?</div>
+    <div class="qhint">Marque cada condição presente. Se uma ou mais estiverem presentes, a questão vale 2 pontos.</div>
+    <div class="options" style="display:grid">
+     <label class="checkline"><input type="checkbox" name="q14detail" value="Perda de peso não intencional de 4,5 kg ou 5% do peso corporal no último ano, ou 6 kg nos últimos 6 meses, ou 3 kg no último mês"> Perda de peso não intencional de 4,5 kg ou 5% do peso corporal no último ano, ou 6 kg nos últimos 6 meses, ou 3 kg no último mês</label>
+     <label class="checkline"><input type="checkbox" name="q14detail" value="IMC menor que 22 kg/m²"> Índice de Massa Corporal (IMC) menor que 22 kg/m²</label>
+     <label class="checkline"><input type="checkbox" name="q14detail" value="Circunferência da panturrilha menor que 31 cm"> Circunferência da panturrilha menor que 31 cm</label>
+     <label class="checkline"><input type="checkbox" name="q14detail" value="Tempo no teste de velocidade da marcha (4 m) maior que 5 segundos"> Tempo gasto no teste de velocidade da marcha (4 m) maior que 5 segundos</label>
+    </div>
+    <p class="small">Pontuação da questão: <strong>2 pontos</strong> se qualquer critério for assinalado; caso contrário, 0.</p>
+   </div>
+   <div class="question"><div class="qtitle">15. Você tem dificuldade para caminhar capaz de impedir a realização de alguma atividade do cotidiano?</div><div class="options"><label><input type="radio" name="q15" value="2"> Sim (2 pontos)</label><label><input type="radio" name="q15" value="0"> Não (0 ponto)</label></div></div>
+   <div class="question"><div class="qtitle">16. Você teve duas ou mais quedas no último ano?</div><div class="options"><label><input type="radio" name="q16" value="2"> Sim (2 pontos)</label><label><input type="radio" name="q16" value="0"> Não (0 ponto)</label></div></div>
+   <div class="question"><div class="qtitle">17. Você perde urina ou fezes, sem querer, em algum momento?</div><div class="options"><label><input type="radio" name="q17" value="2"> Sim (2 pontos)</label><label><input type="radio" name="q17" value="0"> Não (0 ponto)</label></div></div>
+
+   <h3>7. Comunicação</h3>
+   <div class="question"><div class="qtitle">18. Você tem problemas de visão capazes de impedir a realização de alguma atividade do cotidiano? É permitido o uso de óculos ou lentes de contato.</div><div class="options"><label><input type="radio" name="q18" value="2"> Sim (2 pontos)</label><label><input type="radio" name="q18" value="0"> Não (0 ponto)</label></div></div>
+   <div class="question"><div class="qtitle">19. Você tem problemas de audição capazes de impedir a realização de alguma atividade do cotidiano? É permitido o uso de aparelhos de audição.</div><div class="options"><label><input type="radio" name="q19" value="2"> Sim (2 pontos)</label><label><input type="radio" name="q19" value="0"> Não (0 ponto)</label></div></div>
+
+   <h3>8. Comorbidades múltiplas</h3>
+   <div class="question">
+    <div class="qtitle">20. Você tem alguma das três condições abaixo relacionadas?</div>
+    <div class="options" style="display:grid">
+     <label class="checkline"><input type="checkbox" name="q20detail" value="Cinco ou mais doenças crônicas"> Cinco ou mais doenças crônicas</label>
+     <label class="checkline"><input type="checkbox" name="q20detail" value="Uso regular de cinco ou mais medicamentos diferentes, todos os dias"> Uso regular de cinco ou mais medicamentos diferentes, todos os dias</label>
+     <label class="checkline"><input type="checkbox" name="q20detail" value="Internação recente, nos últimos 6 meses"> Internação recente, nos últimos 6 meses</label>
+    </div>
+    <p class="small">Pontuação da questão: <strong>4 pontos</strong> se uma ou mais condições forem assinaladas; caso contrário, 0.</p>
+   </div>
+  </section>
+
+  <section class="panel">
+   <h2>Observações clínicas e plano inicial</h2>
+   <div class="field"><label for="notes">Observações / necessidades identificadas</label><textarea id="notes" rows="4" placeholder="Registre informações relevantes para a continuidade do cuidado."></textarea></div>
+   <div class="field" style="margin-top:12px"><label for="plan">Conduta / encaminhamentos / plano de acompanhamento</label><textarea id="plan" rows="4" placeholder="Descreva a conduta definida pela equipe após avaliação clínica."></textarea></div>
+  </section>
+
+  <div class="actions no-print">
+   <button class="primary" type="button" id="calcBtn">Calcular resultado</button>
+   <button class="secondary" type="button" id="pdfBtn">Salvar resultado em PDF</button>
+   <button class="secondary" type="reset" id="resetBtn">Limpar formulário</button>
+  </div>
+  <section class="panel result" id="result" aria-live="polite">
+   <h2>Resultado da avaliação</h2>
+   <div class="scoreline">
+    <div class="score"><span id="total">0</span><small> / 40 pontos</small></div>
+    <div><span id="classification" class="status">Classificação</span><p id="interpretation" style="margin:7px 0 0"></p></div>
+   </div>
+   <div class="progress"><div id="bar"></div></div>
+   <p id="completion" class="small"></p>
+   <table class="breakdown">
+    <thead><tr><th>Domínio</th><th>Pontuação</th></tr></thead>
+    <tbody id="domainRows"></tbody>
+   </table>
+   <hr>
+   <p><strong>Importante:</strong> o IVCF-20 é um instrumento de rastreio. A classificação deve ser interpretada pelo profissional responsável em conjunto com a história, o exame clínico, o contexto social e a funcionalidade da pessoa idosa. O resultado não estabelece diagnóstico isoladamente.</p>
+  </section>
+ </form>
+</main>
+<footer>
+ <p><strong>Uso assistencial — Clínica de APS Qualirede.</strong> Este formulário funciona localmente no navegador e não transmite nem armazena os dados em servidor. Ao gerar PDF, o usuário deve salvar o arquivo em local institucional seguro, conforme as regras de privacidade e proteção de dados aplicáveis.</p>
+ <p>Instrumento apresentado conforme a versão IVCF-20 para profissional de saúde fornecida para esta implementação. Referências de consulta: <a href="https://www.ivcf20.org/" target="_blank" rel="noopener">site oficial IVCF-20</a> • <a href="https://sisaps.saude.gov.br/sistemas/esusaps/docs/manual/TERRITORIO/territorio_04/" target="_blank" rel="noopener">Ministério da Saúde — orientações sobre aplicação na APS</a>.</p>
+</footer>
+<script>
+const $ = id => document.getElementById(id);
+const names = {
+ q1:"Idade",q2:"Autopercepção da saúde",q3to5:"Atividades de vida diária — instrumental",q6:"Atividade de vida diária — básica",
+ cognition:"Cognição",mood:"Humor",mobility:"Mobilidade",communication:"Comunicação",comorbidity:"Comorbidades múltiplas"
+};
+function selected(name){const el=document.querySelector('input[name="'+name+'"]:checked');return el?Number(el.value):null}
+function sumChecked(name){return [...document.querySelectorAll('input[name="'+name+'"]:checked')].length>0}
+function score(){
+ const required=Array.from({length:13},(_,i)=>"q"+(i+1)).concat(["q15","q16","q17","q18","q19"]);
+ const missing=required.filter(n=>selected(n)===null);
+ // Q14 and Q20 are checkbox groups and can validly have no selections.
+ return {missing};
+}
+function calculate(){
+ const v=score();
+ if(v.missing.length){
+  const first=document.querySelector('input[name="'+v.missing[0]+'"]');
+  first?.closest('.question')?.scrollIntoView({behavior:'smooth',block:'center'});
+  alert('Para calcular, responda todas as questões de escolha única. Verifique as questões ainda não respondidas.');
+  return false;
+ }
+ const val=n=>selected(n)||0;
+ const q3to5=Math.min(4,val('q3')+val('q4')+val('q5'));
+ const parts=[
+  ["Idade",val('q1')],
+  ["Autopercepção da saúde",val('q2')],
+  ["AVD instrumental (questões 3 a 5)",q3to5],
+  ["AVD básica",val('q6')],
+  ["Cognição (questões 7 a 9)",val('q7')+val('q8')+val('q9')],
+  ["Humor (questões 10 e 11)",val('q10')+val('q11')],
+  ["Mobilidade (questões 12 a 17)",val('q12')+val('q13')+(sumChecked('q14detail')?2:0)+val('q15')+val('q16')+val('q17')],
+  ["Comunicação (questões 18 e 19)",val('q18')+val('q19')],
+  ["Comorbidades múltiplas",sumChecked('q20detail')?4:0]
+ ];
+ const total=parts.reduce((a,p)=>a+p[1],0);
+ $('total').textContent=total;
+ const badge=$('classification');
+ badge.className='status';
+ let cls,desc,css;
+ if(total<=6){cls='Baixo risco — robusto';desc='Pontuação de 0 a 6: baixo risco de vulnerabilidade clínico-funcional.';css='low'}
+ else if(total<=14){cls='Moderado risco — risco de fragilização';desc='Pontuação de 7 a 14: moderado risco de vulnerabilidade clínico-funcional.';css='mid'}
+ else{cls='Alto risco — frágil';desc='Pontuação de 15 a 40: alto risco de vulnerabilidade clínico-funcional.';css='high'}
+ badge.textContent=cls;badge.classList.add(css);$('interpretation').textContent=desc;
+ $('bar').style.width=(total/40*100)+'%';
+ $('domainRows').innerHTML=parts.map(p=>'<tr><td>'+p[0]+'</td><td>'+p[1]+' ponto(s)</td></tr>').join('')+'<tr><th>Total</th><th>'+total+' / 40</th></tr>';
+ $('completion').textContent='Avaliação preenchida em '+new Date().toLocaleString('pt-BR')+'.';
+ $('result').classList.add('show');
+ $('result').scrollIntoView({behavior:'smooth',block:'start'});
+ return true;
+}
+$('calcBtn').addEventListener('click',calculate);
+$('pdfBtn').addEventListener('click',()=>{
+ if(!$('result').classList.contains('show')&&!calculate())return;
+ window.print();
+});
+$('resetBtn').addEventListener('click',()=>{
+ $('result').classList.remove('show');
+ $('domainRows').innerHTML='';
+ $('total').textContent='0';
+ $('bar').style.width='0';
+});
+$('assessmentDate').value=new Date().toISOString().slice(0,10);
+$('birth').addEventListener('change',()=>{
+ if(!$('birth').value)return;
+ const b=new Date($('birth').value+'T12:00:00'),t=new Date();
+ let age=t.getFullYear()-b.getFullYear();
+ if(t.getMonth()<b.getMonth()||(t.getMonth()===b.getMonth()&&t.getDate()<b.getDate()))age--;
+ if(age<60)alert('O IVCF-20 é destinado à triagem de pessoas com 60 anos ou mais. Confira a data de nascimento.');
+});
+</script>
+</body>
+</html>
